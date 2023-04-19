@@ -1,12 +1,13 @@
 from bs4 import BeautifulSoup
 import requests
+import os
 
 
     
-url="https://www.tayara.tn/item/location_S2_haut_standing_borj_louzir_prs_MG_643cc499a4cb3b2e7a3e66f9/"
+url="https://www.tayara.tn/item/_louer_Espace_Commerciale_644072f8a4cb3b2e7a3e9827/"
 r=requests.get(url)
 
-with open('tayara/test_tayara.html','wb') as f:
+with open('tayara/test_tayara_single_page.html','wb') as f:
     f.write(r.content)
     
 soup = BeautifulSoup(r.content, 'html.parser')
